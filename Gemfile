@@ -13,6 +13,8 @@ gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'aws-sdk-dynamodb'
+gem 'dotenv-rails'
 gem 'haml-rails'
 
 group :development, :test do
