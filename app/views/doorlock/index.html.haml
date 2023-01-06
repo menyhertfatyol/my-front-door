@@ -1,2 +1,4 @@
-%h1 Doorlock#index
-%p Find me in app/views/doorlock/index.html.haml
+.container
+  .card.text-center.shadow.mb-5.rounded{class: background_color(lock_state(@doorlock))}
+    %h3{id: 'high-margin-top'}= t'front_door'
+    %h1= translate @doorlock
