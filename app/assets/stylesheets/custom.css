@@ -1,0 +1,9 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+#home-container {
+  margin-top: 25px;
+}
+
+#high-margin-top {
+  margin-top: 10px;
+}

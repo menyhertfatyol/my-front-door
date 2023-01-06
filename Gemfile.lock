@@ -84,6 +84,8 @@ GEM
     builder (3.2.4)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.2)
+      railties (>= 6.0.0)
     date (3.3.3)
     debug (1.7.1)
       irb (>= 1.5.0)
@@ -117,6 +119,8 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jmespath (1.6.1)
+    jsbundling-rails (1.1.1)
+      railties (>= 6.0.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -224,16 +228,18 @@ GEM
     zeitwerk (2.6.6)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-22
 
 DEPENDENCIES
   aws-sdk-dynamodb
   bootsnap
+  cssbundling-rails (~> 1.1)
   debug
   dotenv-rails
   haml-rails
   importmap-rails
   jbuilder
+  jsbundling-rails (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec-rails

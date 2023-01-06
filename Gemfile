@@ -25,3 +25,7 @@ end
 group :development do
   gem 'web-console'
 end
+
+gem 'cssbundling-rails', '~> 1.1'
+
+gem "jsbundling-rails", "~> 1.1"
