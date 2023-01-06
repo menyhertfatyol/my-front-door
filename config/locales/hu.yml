@@ -1,0 +1,6 @@
+hu:
+  front_door: 'A bejárati ajtó:'
+  states:
+    open: 'nyitva'
+    locked: 'zárva'
+    error: "állapota nem frissült %{timestamp} óta"
