@@ -16,9 +16,14 @@ jobs:
       - name: Run dependencies
         run: |
           bundle install
+
+      - name: Start containers
+        run: docker-compose -f "docker-compose.yml" up -d --build    
       
       - name: Run tests
-        uses: actions/checkout@v3
-        uses: isbang/compose-action@v1.4.1
         run: |
           bundle exec rake
+
+      - name: Stop containers
+        if: always()
+        run: docker-compose -f "docker-compose.yml" down    
