@@ -40,7 +40,7 @@ module StatusStorage
   end
 
   def delete_table_if_exists(table_name)
-    dynamodb.delete_table(table_name:)
+    dynamodb.delete_table(table_name: table_name)
   rescue Aws::DynamoDB::Errors::ResourceNotFoundException
     puts "#{table_name} table does not exist, unalble to delete it"
   end
