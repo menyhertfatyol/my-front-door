@@ -24,7 +24,7 @@ jobs:
         run: npm install -g sass
 
       - name: Build CSS
-        run: yarn build:css      
+        run: rails css:install:bootstrap && yarn build:css      
       
       - name: Run tests
         run: |
