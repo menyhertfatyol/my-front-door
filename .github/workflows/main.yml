@@ -36,15 +36,15 @@ jobs:
 
   deploy_on_googles_app_engine:
     name: Deploy
-    # needs:
-    #   - test
+    needs:
+      - test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: sleep
-        run: sleep 10  
+        run: sleep  
       - name: replace env vars
         uses: 73h/gae-app-yaml-replace-env-variables@v0.2
         env:
