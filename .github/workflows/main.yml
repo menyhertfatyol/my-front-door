@@ -41,9 +41,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Check pwd
         run: ls -la
-      - uses: actions/checkout@v2
       - uses: 73h/gae-app-yaml-replace-env-variables@v0.1
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
