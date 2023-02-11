@@ -43,9 +43,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: sleep
+        run: sleep 10  
       - name: replace env vars
-        needs:
-          - checkout
         uses: 73h/gae-app-yaml-replace-env-variables@v0.2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
