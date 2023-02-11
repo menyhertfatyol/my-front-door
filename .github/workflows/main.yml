@@ -36,16 +36,13 @@ jobs:
 
   deploy_on_googles_app_engine:
     name: Deploy
-    needs:
-      - test
+    # needs:
+    #   - test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Check pwd
-        run: ls -la
-      - uses: 73h/gae-app-yaml-replace-env-variables@v0.1
-        working-directory: ${{ github.workspace }}/tmp
+      - uses: 73h/gae-app-yaml-replace-env-variables@v0.2
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
