@@ -43,7 +43,7 @@ jobs:
     steps:
       - name: Check pwd
         run: ls -la
-        working-directory: ${{ github.workspace }}
+        working-directory: $GITHUB_WORKSPACE
       - uses: actions/checkout@v2
       - uses: 73h/gae-app-yaml-replace-env-variables@v0.1
         env:
