@@ -1,0 +1,8 @@
+runtime: ruby30
+
+entrypoint: bundle exec rails server Puma -p $PORT
+
+env_variables:
+  AWS_ACCESS_KEY: $AWS_ACCESS_KEY
+  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+  STATUS_STORE_URL: "https://dynamodb.eu-central-1.amazonaws.com"
