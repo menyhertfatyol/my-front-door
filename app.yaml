@@ -5,4 +5,5 @@ entrypoint: bundle exec rails server -u puma -p $PORT
 env_variables:
   AWS_ACCESS_KEY: $AWS_ACCESS_KEY
   AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+  RAILS_MASTER_KEY: $RAILS_MASTER_KEY
   STATUS_STORE_URL: "https://dynamodb.eu-central-1.amazonaws.com"
