@@ -1,6 +1,6 @@
 runtime: ruby30
 
-entrypoint: bundle exec rails server -u puma -p $PORT
+entrypoint: yarn build:css && bundle exec rails server -u puma -p $PORT
 
 env_variables:
   AWS_ACCESS_KEY: $AWS_ACCESS_KEY
