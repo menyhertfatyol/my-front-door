@@ -52,7 +52,7 @@ jobs:
       - uses: 'google-github-actions/auth@v0'
         with:
           credentials_json: '${{ secrets.GCP_SA_JSON }}'
-      - uses: 'google-github-actions/deploy-appengine@v0'
+      - uses: 'google-github-actions/deploy-appengine@v1'
         with:
           deliverables: 'app.yaml'
           promote: true
