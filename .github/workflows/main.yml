@@ -59,3 +59,4 @@ jobs:
           version: 'v1'
           build_env_vars: |-
             RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}
+            GOOGLE_NODEJS_VERSION=~18
