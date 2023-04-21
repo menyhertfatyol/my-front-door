@@ -19,12 +19,6 @@ jobs:
 
       - name: Start containers
         run: docker-compose -f "docker-compose.yml" up -d --build
-
-      - name: Install Sass
-        run: npm install -g sass
-
-      - name: Build CSS
-        run: rails css:install:bootstrap && yarn build:css      
       
       - name: Run tests
         run: |
