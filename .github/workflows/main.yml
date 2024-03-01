@@ -43,7 +43,7 @@ jobs:
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         with:
             app_yaml_path: "app.yaml"  
-      - uses: 'google-github-actions/auth@v0'
+      - uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: '${{ secrets.GCP_SA_JSON }}'
       - uses: 'google-github-actions/deploy-appengine@v1'
