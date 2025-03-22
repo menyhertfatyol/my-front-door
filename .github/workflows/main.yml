@@ -18,7 +18,7 @@ jobs:
           bundle install
 
       - name: Start containers
-        run: docker-compose -f "docker-compose.yml" up -d --build
+        run: docker compose -f "docker-compose.yml" up -d --build
       
       - name: Run tests
         run: |
@@ -26,7 +26,7 @@ jobs:
 
       - name: Stop containers
         if: always()
-        run: docker-compose -f "docker-compose.yml" down
+        run: docker compose -f "docker-compose.yml" down
 
   deploy_on_googles_app_engine:
     name: Deploy
