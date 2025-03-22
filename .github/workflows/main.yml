@@ -48,9 +48,9 @@ jobs:
           credentials_json: '${{ secrets.GCP_SA_JSON }}'
       - uses: 'google-github-actions/deploy-appengine@v2'
         with:
+          project_id: 'my-front-door'
           deliverables: 'app.yaml'
           promote: true
-          verbosity: 'debug'
           version: 'v1'
           build_env_vars: |-
             RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}
