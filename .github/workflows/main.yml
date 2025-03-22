@@ -50,6 +50,7 @@ jobs:
         with:
           deliverables: 'app.yaml'
           promote: true
+          verbosity: 'debug'
           version: 'v1'
           build_env_vars: |-
             RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}
