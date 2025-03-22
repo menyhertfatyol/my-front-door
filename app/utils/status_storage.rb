@@ -35,8 +35,8 @@ module StatusStorage
   def recreate_table(table_schema)
     delete_table_if_exists(TABLE_NAME)
     dynamodb.create_table(table_schema)
-  rescue Aws::DynamoDB::Errors::ServiceError => error
-    puts "Unable to create table: #{error.message}"
+  rescue Aws::DynamoDB::Errors::ServiceError => e
+    puts "Unable to create table: #{e.message}"
   end
 
   def delete_table_if_exists(table_name)
