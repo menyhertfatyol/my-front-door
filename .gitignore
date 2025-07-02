@@ -2,6 +2,7 @@
 
 .env
 .vscode
+.idea
 
 /log/*
 /tmp/*
