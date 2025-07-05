@@ -1,4 +1,4 @@
-runtime: ruby32
+runtime: ruby34
 
 entrypoint: bundle exec rails server -u puma -p $PORT
 
