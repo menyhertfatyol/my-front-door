@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '~> 3.4.0'
 
+gem 'bigdecimal'
 gem 'bootsnap', require: false
 gem 'importmap-rails'
 gem 'jbuilder'
