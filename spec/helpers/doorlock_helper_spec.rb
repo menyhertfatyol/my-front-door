@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'ostruct'
+
 
 RSpec.describe DoorlockHelper, type: :helper do
   let(:helper) { Class.new }
